@@ -5,6 +5,7 @@ This is a simple ASP.NET Core web app I created to learn and practice CI/CD usin
 The goal of this project is to get hands-on experience with:
 - GitHub Actions (using YAML)
 - Running build and test steps automatically on push or pull request
+- Very basic Microsoft Service Bus processing
 
 I'll be updating this as I learn more. Right now the pipeline runs on every push to `production` and checks that the app builds and tests pass.
 
