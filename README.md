@@ -1,4 +1,4 @@
-# ASP.NET Core CI/CD Practice
+# ASP.NET Core CI/CD Practice + MS Service Bus
 
 This is a simple ASP.NET Core web app I created to learn and practice CI/CD using GitHub Actions.
 
