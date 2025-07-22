@@ -1,4 +1,4 @@
-name: BookWrom - Build and Test .NET
+name: Build and Test .NET
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
         run: dotnet build BookWrom/BookWrom.sln --no-restore --configuration Release
 
       - name: Run tests
-        run: dotnet test BookWrom/BookWrom.sln --no-build --verbosity normal
+        run: dotnet test BookWrom/BookWrom.sln --configuration Release --logger "trx"
