@@ -20,10 +20,10 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore BookWrom/BookWrom.sln
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build BookWrom/BookWrom.sln --no-restore --configuration Release
 
       - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test BookWrom/BookWrom.sln --no-build --verbosity normal
