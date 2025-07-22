@@ -28,7 +28,7 @@ jobs:
       - name: Run tests and generate results
         run: dotnet test BookWrom/BookWrom.sln --configuration Release --logger "trx;LogFileName=bookwromg_test_results.trx"
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: BookWrom.Tests/TestResults/bookwrom_test_results.trx
