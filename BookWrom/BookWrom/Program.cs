@@ -1,9 +1,18 @@
-var builder = WebApplication.CreateBuilder(args);
+using Azure.Identity;
+using BookWrom.Services;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<MessageSenderService>();
 
-var app = builder.Build();
+builder.Configuration.AddAzureKeyVault(
+    new Uri("https://azure-sandbox-lej1-kv.vault.azure.net/"),
+    new DefaultAzureCredential()
+);
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

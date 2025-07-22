@@ -1,0 +1,19 @@
+﻿@page
+@model BookWrom.Pages.Orders.PlaceOrderModel
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<form method="post">
+    <div>
+        <label for="OrderId">Order ID:</label>
+        <input type="text" id="OrderId" name="OrderId" required />
+    </div>
+    <br />
+    <button type="submit">Submit</button>
+</form>
+
+@if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
+{
+    <p style="color: green;">@Model.SuccessMessage</p>
+}
