@@ -28,7 +28,7 @@ jobs:
       - name: Run tests and generate results
         run: |
           mkdir -p TestResults
-          dotnet test BookWrom/BookWrom.sln --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
+          dotnet test BookWrom/BookWrom.sln --configuration Release --logger "trx;LogFileName=bookwrom_test_results.trx" --results-directory ./TestResults
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
